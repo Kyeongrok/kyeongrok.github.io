@@ -1,0 +1,131 @@
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kyeongrok Games</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+            background: #111827;
+            color: #f9fafb;
+        }
+
+        .container {
+            width: min(900px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 80px 0;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 42px;
+        }
+
+        .description {
+            color: #9ca3af;
+            font-size: 18px;
+        }
+
+        .game {
+            background: #1f2937;
+            border: 1px solid #374151;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .game h2 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        .version {
+            color: #9ca3af;
+            margin-bottom: 24px;
+        }
+
+        .download {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .download:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 60px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Kyeongrok Games</h1>
+        <div class="description">
+            Games made by Kyeongrok
+        </div>
+    </header>
+
+    <main>
+
+        <section class="game">
+            <h2>My Game</h2>
+
+            <div class="version">
+                Latest version: v1.0.0
+            </div>
+
+            <a
+                class="download"
+                href="https://github.com/Kyeongrok/MyGame/releases/download/v1.0.0/MyGame-Windows.zip"
+            >
+                Download for Windows
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="https://github.com/Kyeongrok">
+            GitHub
+        </a>
+    </footer>
+
+</div>
+
+</body>
+</html>
+```
