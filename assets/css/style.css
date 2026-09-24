@@ -1,0 +1,382 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Malgun Gothic",
+        sans-serif;
+    line-height: 1.6;
+
+    background: #111827;
+    color: #f9fafb;
+}
+
+a {
+    color: #93c5fd;
+}
+
+/* ---------- Layout ---------- */
+
+.site-header,
+.site-footer {
+    width: min(1040px, 100%);
+    margin: 0 auto;
+    padding: 20px 16px;
+}
+
+.site-title {
+    color: #f9fafb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.site-footer a {
+    color: #6b7280;
+    text-decoration: none;
+}
+
+.page {
+    width: min(1040px, 100%);
+    margin: 0 auto;
+    padding: 0 16px 40px;
+}
+
+/* ---------- Banner ---------- */
+
+.banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #0f172a;
+}
+
+.banner img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 흰 배경 이미지(로고 등) — 잘리지 않게 전체를 보여주고 어두운 덮개를 뺀다 */
+.banner.light {
+    background: #ffffff;
+}
+
+.banner.light img {
+    object-fit: contain;
+}
+
+.banner.light::after {
+    display: none;
+}
+
+.banner.placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle at 30% 30%, rgba(239, 68, 68, 0.35), transparent 60%),
+        radial-gradient(circle at 75% 70%, rgba(234, 179, 8, 0.25), transparent 55%),
+        #0f172a;
+}
+
+.banner.placeholder.sea {
+    background:
+        radial-gradient(circle at 25% 35%, rgba(56, 189, 248, 0.35), transparent 60%),
+        radial-gradient(circle at 80% 75%, rgba(20, 184, 166, 0.28), transparent 55%),
+        #0c1a2e;
+}
+
+.banner.placeholder span {
+    padding: 0 20px;
+    font-size: clamp(22px, 5vw, 40px);
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.16);
+    letter-spacing: 3px;
+    white-space: nowrap;
+}
+
+/* ---------- Home ---------- */
+
+.intro {
+    text-align: center;
+    margin: 20px 0 36px;
+}
+
+.intro h1 {
+    font-size: clamp(30px, 6vw, 44px);
+    margin: 0 0 6px;
+}
+
+.intro p {
+    margin: 0;
+    color: #9ca3af;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    border-radius: 16px;
+    background: #1f2937;
+    color: inherit;
+    text-decoration: none;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(59, 130, 246, 0.25);
+}
+
+.card .banner {
+    aspect-ratio: 2 / 1;
+}
+
+.card .banner.placeholder span {
+    font-size: clamp(20px, 3vw, 28px);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 16px 20px 18px;
+}
+
+.card h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0 0 16px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+.badge {
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #111827;
+    color: #9ca3af;
+}
+
+.more {
+    color: #93c5fd;
+    font-weight: 600;
+}
+
+/* ---------- Project page ---------- */
+
+.back {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #9ca3af;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #f9fafb;
+}
+
+.project {
+    width: min(760px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero {
+    aspect-ratio: 21 / 9;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(17, 24, 39, 0) 55%,
+        rgba(17, 24, 39, 0.85) 100%
+    );
+}
+
+.project h1 {
+    font-size: clamp(30px, 6vw, 42px);
+    margin: 18px 0 4px;
+}
+
+.tagline {
+    margin: 0 0 28px;
+    color: #9ca3af;
+}
+
+.release-info {
+    margin-top: 18px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.release-info a {
+    color: #9ca3af;
+}
+
+.error {
+    color: #f87171;
+}
+
+.content {
+    margin-top: 44px;
+    padding-top: 12px;
+    border-top: 1px solid #1f2937;
+    text-align: left;
+    color: #d1d5db;
+}
+
+.content h2 {
+    margin-top: 32px;
+    color: #f9fafb;
+    font-size: 22px;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.content img.screenshot {
+    display: block;
+    width: min(340px, 100%);
+    margin: 24px auto;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+.content code {
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: #1f2937;
+    font-size: 0.92em;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content th,
+.content td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #1f2937;
+    text-align: left;
+}
+
+/* ---------- Download buttons ---------- */
+
+.downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.download {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.download .sub {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.download.primary {
+    width: min(400px, 100%);
+    padding: 20px 32px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #3b82f6, #2563eb 50%, #7c3aed);
+    color: white;
+    font-size: 22px;
+
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+        0 10px 30px rgba(59, 130, 246, 0.45);
+    animation: glow 2.4s ease-in-out infinite;
+}
+
+.download.primary:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset,
+        0 16px 40px rgba(124, 58, 237, 0.55);
+}
+
+.download.secondary {
+    padding: 12px 24px;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #d1d5db;
+    border: 1px solid #374151;
+    font-size: 16px;
+}
+
+.download.secondary:hover {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 10px 30px rgba(59,130,246,0.40); }
+    50%      { box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 10px 44px rgba(124,58,237,0.65); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .download.primary { animation: none; }
+    .card, .download { transition: none; }
+}

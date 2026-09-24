@@ -1,0 +1,21 @@
+title: Kyeongrok's Projects
+description: 직접 만든 게임 리메이크와 Windows 앱을 내려받는 곳
+lang: ko
+
+markdown: kramdown
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+exclude:
+  - README.md
+  - .playwright-mcp

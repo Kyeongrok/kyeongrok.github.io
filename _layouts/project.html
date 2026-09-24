@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<a class="back" href="{{ '/' | relative_url }}">← 전체 프로젝트</a>
+
+<article class="project">
+
+    {% if page.banner %}
+    <div class="hero banner{% if page.banner_light %} light{% endif %}">
+        <img
+            src="{{ page.banner | relative_url }}"
+            alt="{{ page.title }}"
+            style="object-position: {{ page.banner_position | default: 'center' }};"
+        >
+    </div>
+    {% else %}
+    <div class="hero banner placeholder {{ page.banner_theme }}"><span>{{ page.title }}</span></div>
+    {% endif %}
+
+    <h1>{{ page.title }}</h1>
+    <p class="tagline">{{ page.tagline }}</p>
+
+    <div
+        class="downloads"
+        data-downloads
+        data-repository="{{ page.repository }}"
+    >
+        <script type="application/json">{{ page.downloads | jsonify }}</script>
+    </div>
+
+    <div class="release-info">
+        <span data-release-version data-repository="{{ page.repository }}">
+            Checking latest version...
+        </span>
+        ·
+        <a href="https://github.com/{{ page.repository }}/releases">모든 릴리스</a>
+        ·
+        <a href="https://github.com/{{ page.repository }}">GitHub</a>
+    </div>
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+</article>

@@ -1,148 +1,45 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+---
 
-    <title>Costa Del Sol</title>
+<section class="intro">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+</section>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<div class="cards">
+    {% assign projects = site.projects | sort: "order" %}
+    {% for project in projects %}
+    <a class="card" href="{{ project.url | relative_url }}">
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        {% if project.banner %}
+        <div class="banner{% if project.banner_light %} light{% endif %}">
+            <img
+                src="{{ project.banner | relative_url }}"
+                alt="{{ project.title }}"
+                loading="lazy"
+                style="object-position: {{ project.banner_position | default: 'center' }};"
+            >
+        </div>
+        {% else %}
+        <div class="banner placeholder {{ project.banner_theme }}"><span>{{ project.title }}</span></div>
+        {% endif %}
 
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                sans-serif;
+        <div class="card-body">
+            <h2>{{ project.title }}</h2>
+            <p>{{ project.tagline }}</p>
 
-            background: #111827;
-            color: #f9fafb;
-        }
+            <div class="card-footer">
+                <span
+                    class="badge"
+                    data-release-version
+                    data-short
+                    data-repository="{{ project.repository }}"
+                >…</span>
+                <span class="more">자세히 보기 →</span>
+            </div>
+        </div>
 
-        .container {
-            width: min(600px, calc(100% - 40px));
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            color: #9ca3af;
-            margin-bottom: 35px;
-        }
-
-        .download {
-            display: inline-block;
-            padding: 14px 28px;
-
-            border-radius: 8px;
-
-            background: #2563eb;
-            color: white;
-
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .download:hover {
-            background: #1d4ed8;
-        }
-
-        .version {
-            margin-top: 20px;
-            color: #6b7280;
-            font-size: 14px;
-        }
-
-        .error {
-            color: #f87171;
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <h1>Costa Del Sol</h1>
-
-    <div class="description">
-        Download the latest version
-    </div>
-
-    <a
-        id="download"
-        class="download"
-        href="#"
-        style="display: none;"
-    >
-        Download for Windows
     </a>
-
-    <div id="version" class="version">
-        Checking latest version...
-    </div>
-
+    {% endfor %}
 </div>
-
-<script>
-    const repository = "Kyeongrok/cds-remake";
-    const assetName = "CostaDelSol.exe";
-
-    async function loadLatestRelease() {
-        const versionElement = document.getElementById("version");
-        const downloadElement = document.getElementById("download");
-
-        try {
-            const response = await fetch(
-                `https://api.github.com/repos/${repository}/releases/latest`
-            );
-
-            if (!response.ok) {
-                throw new Error("Failed to load release");
-            }
-
-            const release = await response.json();
-
-            const asset = release.assets.find(
-                asset => asset.name === assetName
-            );
-
-            if (!asset) {
-                throw new Error(`${assetName} not found`);
-            }
-
-            downloadElement.href = asset.browser_download_url;
-            downloadElement.style.display = "inline-block";
-
-            versionElement.textContent =
-                `Latest version: ${release.tag_name}`;
-
-        } catch (error) {
-            console.error(error);
-
-            versionElement.textContent =
-                "Failed to load the latest version.";
-
-            versionElement.classList.add("error");
-        }
-    }
-
-    loadLatestRelease();
-</script>
-
-</body>
-</html>
