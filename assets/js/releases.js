@@ -114,7 +114,10 @@ async function fillDownloads(container) {
     try {
         const release = await getLatestRelease(repository);
 
-        for (const { match, label, sub, primary } of config) {
+        // primary 버튼과 beside_primary 버튼은 한 줄(.download-row)에 나란히 놓는다.
+        let row = null;
+
+        for (const { match, label, sub, primary, beside_primary } of config) {
             const pattern = new RegExp(match);
             const asset = release.assets.find(a => pattern.test(a.name));
 
@@ -133,7 +136,17 @@ async function fillDownloads(container) {
             subText.textContent = `${sub} · ${formatSize(asset.size)}`;
             link.appendChild(subText);
 
-            container.appendChild(link);
+            if (primary || beside_primary) {
+                if (!row) {
+                    row = document.createElement("div");
+                    row.className = "download-row";
+                    container.appendChild(row);
+                }
+
+                row.appendChild(link);
+            } else {
+                container.appendChild(link);
+            }
         }
 
         if (!container.querySelector("a")) {

@@ -6,10 +6,14 @@ banner: /assets/images/war-of-genesis-3-part2.jpg
 banner_light: true
 order: 3
 downloads:
-  - match: '^(WarOfGenesis|DuelDx)\.exe$'
-    label: ⬇ 게임 다운로드
-    sub: 설치 없이 바로 실행
+  - match: '^WarOfGenesis-win-Setup\.exe$'
+    label: ⬇ 설치하기
+    sub: 설치판 · 자동 업데이트 (권장)
     primary: true
+  - match: '^(WarOfGenesis|DuelDx)\.exe$'
+    label: 포터블 받기
+    sub: 설치 없이 바로 실행
+    beside_primary: true
   - match: '^WarOfGenesis\.Editor\.exe$'
     label: 에디터 받기
     sub: 게임 데이터 에디터
@@ -22,7 +26,9 @@ downloads:
 
 ## 다운로드 안내
 
-- **게임** — `WarOfGenesis.exe` 하나에 캐릭터, 배경 등 필요한 리소스가 모두 들어 있어서 설치 없이 바로 실행됩니다.
+- **설치판 (권장)** — `WarOfGenesis-win-Setup.exe`를 실행하면 설치가 끝난 뒤 바로 게임이 켜집니다.
+  이후 새 버전이 나오면 자동으로 업데이트됩니다.
+- **포터블** — `WarOfGenesis.exe` 하나에 캐릭터, 배경 등 필요한 리소스가 모두 들어 있어서 설치 없이 바로 실행됩니다.
 - **에디터** — `WarOfGenesis.Editor.exe`도 설치 없이 실행되는 단일 파일입니다.
 
 리소스가 모두 들어 있어서 파일 하나가 600MB 정도입니다.
