@@ -6,7 +6,6 @@ body {
     margin: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
 
     font-family:
         -apple-system,
@@ -26,23 +25,91 @@ a {
 
 /* ---------- Layout ---------- */
 
-.site-header,
-.site-footer {
-    width: min(1040px, 100%);
-    margin: 0 auto;
-    padding: 20px 16px;
+.sidebar {
+    position: sticky;
+    top: 0;
+    flex: 0 0 220px;
+    height: 100vh;
+    padding: 28px 16px;
+    border-right: 1px solid #1f2937;
+    background: #0b1220;
 }
 
 .site-title {
+    display: block;
+    margin: 0 12px 24px;
     color: #f9fafb;
     font-weight: 700;
     text-decoration: none;
 }
 
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.side-nav a {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #9ca3af;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.15s, color 0.15s;
+}
+
+.side-nav a:hover {
+    background: #1f2937;
+    color: #f9fafb;
+}
+
+.side-nav a.active {
+    background: #1e3a8a;
+    color: #f9fafb;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    padding-top: 28px;
+}
+
 .site-footer {
-    margin-top: auto;
+    width: min(1040px, 100%);
+    margin: auto auto 0;
+    padding: 20px 16px;
     text-align: center;
     font-size: 14px;
+}
+
+/* 좁은 화면에서는 사이드바를 위쪽 가로 메뉴로 바꾼다 */
+@media (max-width: 760px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        flex: none;
+        height: auto;
+        padding: 14px 16px;
+        border-right: none;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    .site-title {
+        margin: 0 0 10px;
+    }
+
+    .side-nav {
+        flex-direction: row;
+    }
+
+    .main {
+        padding-top: 20px;
+    }
 }
 
 .site-footer a {
@@ -269,6 +336,11 @@ a {
     border-top: 1px solid #1f2937;
     text-align: left;
     color: #d1d5db;
+}
+
+.content.about {
+    width: min(760px, 100%);
+    margin: 0 auto;
 }
 
 .content h2 {

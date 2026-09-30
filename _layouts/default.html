@@ -12,19 +12,38 @@
 
 <body>
 
-<header class="site-header">
-    {% unless page.url == "/" %}
+{% assign on_downloads = false %}
+{% if page.url == "/" or page.collection == "projects" %}
+    {% assign on_downloads = true %}
+{% endif %}
+
+<aside class="sidebar">
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    {% endunless %}
-</header>
 
-<main class="page">
-    {{ content }}
-</main>
+    <nav class="side-nav">
+        <a
+            href="{{ '/' | relative_url }}"
+            {% if on_downloads %}class="active"{% endif %}
+            {% if page.url == "/" %}aria-current="page"{% endif %}
+        >앱 다운로드</a>
+        {% comment %} Profile 메뉴는 당분간 숨김 (페이지는 /profile/ 에 그대로 있음)
+        <a
+            href="{{ '/profile/' | relative_url }}"
+            {% if page.url == "/profile/" %}class="active" aria-current="page"{% endif %}
+        >Profile</a>
+        {% endcomment %}
+    </nav>
+</aside>
 
-<footer class="site-footer">
-    <a href="https://github.com/Kyeongrok">github.com/Kyeongrok</a>
-</footer>
+<div class="main">
+    <main class="page">
+        {{ content }}
+    </main>
+
+    <footer class="site-footer">
+        <a href="https://github.com/Kyeongrok">github.com/Kyeongrok</a>
+    </footer>
+</div>
 
 <script src="{{ '/assets/js/releases.js' | relative_url }}"></script>
 
