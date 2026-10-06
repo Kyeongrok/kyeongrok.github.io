@@ -349,6 +349,26 @@ a {
     font-size: 22px;
 }
 
+.content h3 {
+    margin-top: 28px;
+    color: #f9fafb;
+    font-size: 17px;
+}
+
+/* 설명서 — 표가 많다. 좁은 화면에서는 표만 옆으로 민다 */
+.content.guide table {
+    display: block;
+    overflow-x: auto;
+    margin: 12px 0 20px;
+    font-size: 15px;
+}
+
+.content.guide th {
+    color: #9ca3af;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
 .content img {
     max-width: 100%;
     border-radius: 12px;

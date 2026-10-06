@@ -16,7 +16,7 @@ downloads:
     beside_primary: true
   - match: '^WarOfGenesis\.Editor\.exe$'
     label: 에디터 받기
-    sub: 게임 데이터 에디터
+    sub: 게임 데이터 살펴보기
 ---
 
 ## 소개
@@ -30,6 +30,8 @@ downloads:
   이후 새 버전이 나오면 자동으로 업데이트됩니다.
 - **포터블** — `WarOfGenesis.exe` 하나에 캐릭터, 배경 등 필요한 리소스가 모두 들어 있어서 설치 없이 바로 실행됩니다.
 - **에디터** — `WarOfGenesis.Editor.exe`도 설치 없이 실행되는 단일 파일입니다.
+  이 파일은 제 안에 든 자료를 열어 보는 용도라, 여기서 고친 것은 게임에 반영되지 않습니다.
+  게임에 반영할 것을 고치려면 게임 메뉴의 **개발 > 편집기 열기**로 여세요.
 
 리소스가 모두 들어 있어서 파일 하나가 600MB 정도입니다.
 
@@ -43,6 +45,8 @@ downloads:
 - 챕터 진행
 - 사운드
 - 모션 매핑 — 모션 타이밍 조정, 키 미리보기
+
+어빌리티의 위력 · 사거리 · 비용 등을 직접 고쳐 보고 싶다면 [어빌리티 편집 설명서]({{ '/projects/war-of-genesis-3-part2/ability-editor/' | relative_url }})를 보세요.
 
 ## 필요 환경
 
