@@ -1,0 +1,22 @@
+# 화면에 고정으로 나오는 문구. 페이지의 lang 값으로 고른다.
+ko:
+  name: 한국어
+  title: Kyeongrok's Projects
+  description: 직접 만든 게임 리메이크와 Windows 앱을 내려받는 곳
+  home: /
+  nav_downloads: 앱 다운로드
+  back: ← 전체 프로젝트
+  more: 자세히 보기 →
+  all_releases: 모든 릴리스
+  checking_version: 최신 버전 확인 중...
+
+ja:
+  name: 日本語
+  title: Kyeongrok's Projects
+  description: 自作のゲームリメイクと Windows アプリのダウンロードページ
+  home: /ja/
+  nav_downloads: アプリのダウンロード
+  back: ← プロジェクト一覧
+  more: 詳しく見る →
+  all_releases: すべてのリリース
+  checking_version: 最新バージョンを確認中...

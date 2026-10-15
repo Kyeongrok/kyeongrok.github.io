@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+{% assign t = site.data.i18n[page.lang] %}
+{% comment %} 같은 내용의 다른 언어 페이지들. 프로젝트는 파일 이름(slug), 일반 페이지는 ref 로 짝을 찾는다. {% endcomment %}
+{% if page.collection == "projects" %}
+    {% assign translations = site.projects | where: "slug", page.slug %}
+{% elsif page.ref %}
+    {% assign translations = site.pages | where: "ref", page.ref %}
+{% else %}
+    {% assign translations = "" | split: "" %}
+{% endif %}
+<html lang="{{ page.lang }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ page.tagline | default: site.description }}">
+    <title>{% if page.title %}{{ page.title }} · {% endif %}{{ t.title }}</title>
+    <meta name="description" content="{{ page.tagline | default: t.description }}">
+
+    {% for translation in translations %}
+    <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url | absolute_url }}">
+    {% endfor %}
+
+    <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
@@ -13,19 +28,19 @@
 <body>
 
 {% assign on_downloads = false %}
-{% if page.url == "/" or page.collection == "projects" %}
+{% if page.ref == "home" or page.collection == "projects" %}
     {% assign on_downloads = true %}
 {% endif %}
 
 <aside class="sidebar">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="site-title" href="{{ t.home | relative_url }}">{{ t.title }}</a>
 
     <nav class="side-nav">
         <a
-            href="{{ '/' | relative_url }}"
+            href="{{ t.home | relative_url }}"
             {% if on_downloads %}class="active"{% endif %}
-            {% if page.url == "/" %}aria-current="page"{% endif %}
-        >앱 다운로드</a>
+            {% if page.ref == "home" %}aria-current="page"{% endif %}
+        >{{ t.nav_downloads }}</a>
         {% comment %} Profile 메뉴는 당분간 숨김 (페이지는 /profile/ 에 그대로 있음)
         <a
             href="{{ '/profile/' | relative_url }}"
@@ -36,6 +51,24 @@
 </aside>
 
 <div class="main">
+    {% if translations.size > 1 %}
+    <div class="top-bar">
+        <nav class="lang-switch" aria-label="Language">
+            {% for code in site.languages %}
+            {% assign translation = translations | where: "lang", code | first %}
+            {% if translation %}
+            <a
+                href="{{ translation.url | relative_url }}"
+                hreflang="{{ code }}"
+                data-lang="{{ code }}"
+                {% if code == page.lang %}aria-current="true"{% endif %}
+            >{{ site.data.i18n[code].name }}</a>
+            {% endif %}
+            {% endfor %}
+        </nav>
+    </div>
+    {% endif %}
+
     <main class="page">
         {{ content }}
     </main>

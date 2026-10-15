@@ -5,6 +5,23 @@ const CACHE_MS = 10 * 60 * 1000;
 
 const pending = new Map();
 
+const MESSAGES = {
+    ko: {
+        locale: "ko-KR",
+        latest: (tag, date) => `최신 버전 ${tag} (${date})`,
+        failed: text.failed,
+        fallback: text.fallback,
+    },
+    ja: {
+        locale: "ja-JP",
+        latest: (tag, date) => `最新バージョン ${tag}（${date}）`,
+        failed: "最新バージョンを取得できませんでした。",
+        fallback: "GitHub のリリースからダウンロード",
+    },
+};
+
+const text = MESSAGES[document.documentElement.lang] || MESSAGES.ko;
+
 function readCache(key) {
     try {
         const cached = JSON.parse(sessionStorage.getItem(key));
@@ -82,7 +99,7 @@ function formatSize(bytes) {
 }
 
 function formatDate(isoDate) {
-    return new Date(isoDate).toLocaleDateString("ko-KR");
+    return new Date(isoDate).toLocaleDateString(text.locale);
 }
 
 async function fillVersion(element) {
@@ -93,14 +110,14 @@ async function fillVersion(element) {
 
         element.textContent = "short" in element.dataset
             ? release.tag
-            : `최신 버전 ${release.tag} (${formatDate(release.publishedAt)})`;
+            : text.latest(release.tag, formatDate(release.publishedAt));
 
     } catch (error) {
         console.error(error);
 
         element.textContent = "short" in element.dataset
             ? "—"
-            : "최신 버전을 불러오지 못했습니다.";
+            : text.failed;
 
         element.classList.add("error");
     }
@@ -159,7 +176,7 @@ async function fillDownloads(container) {
         const link = document.createElement("a");
         link.className = "download primary";
         link.href = `https://github.com/${repository}/releases`;
-        link.textContent = "GitHub 릴리스에서 받기";
+        link.textContent = text.fallback;
         container.appendChild(link);
     }
 }

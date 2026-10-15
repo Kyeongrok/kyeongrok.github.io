@@ -2,6 +2,9 @@ title: Kyeongrok's Projects
 description: 직접 만든 게임 리메이크와 Windows 앱을 내려받는 곳
 lang: ko
 
+# 지원하는 언어. 첫 번째가 기본 언어다.
+languages: [ko, ja]
+
 markdown: kramdown
 
 collections:
@@ -12,9 +15,20 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      lang: ko
+  - scope:
+      path: ""
       type: projects
     values:
       layout: project
+  # 일본어판 프로젝트는 _projects/ja/ 에 같은 파일 이름으로 둔다.
+  - scope:
+      path: "_projects/ja"
+      type: projects
+    values:
+      lang: ja
+      permalink: /ja/projects/:name/
 
 exclude:
   - README.md

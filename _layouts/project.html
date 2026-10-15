@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<a class="back" href="{{ '/' | relative_url }}">← 전체 프로젝트</a>
+{% assign t = site.data.i18n[page.lang] %}
+
+<a class="back" href="{{ t.home | relative_url }}">{{ t.back }}</a>
 
 <article class="project">
 
@@ -31,10 +33,10 @@ layout: default
 
     <div class="release-info">
         <span data-release-version data-repository="{{ page.repository }}">
-            Checking latest version...
+            {{ t.checking_version }}
         </span>
         ·
-        <a href="https://github.com/{{ page.repository }}/releases">모든 릴리스</a>
+        <a href="https://github.com/{{ page.repository }}/releases">{{ t.all_releases }}</a>
         ·
         <a href="https://github.com/{{ page.repository }}">GitHub</a>
     </div>

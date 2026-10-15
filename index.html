@@ -1,45 +1,6 @@
 ---
 layout: default
+ref: home
 ---
 
-<section class="intro">
-    <h1>{{ site.title }}</h1>
-    <p>{{ site.description }}</p>
-</section>
-
-<div class="cards">
-    {% assign projects = site.projects | sort: "order" %}
-    {% for project in projects %}
-    <a class="card" href="{{ project.url | relative_url }}">
-
-        {% if project.banner %}
-        <div class="banner{% if project.banner_light %} light{% endif %}">
-            <img
-                src="{{ project.banner | relative_url }}"
-                alt="{{ project.title }}"
-                loading="lazy"
-                style="object-position: {{ project.banner_position | default: 'center' }};"
-            >
-        </div>
-        {% else %}
-        <div class="banner placeholder {{ project.banner_theme }}"><span>{{ project.title }}</span></div>
-        {% endif %}
-
-        <div class="card-body">
-            <h2>{{ project.title }}</h2>
-            <p>{{ project.tagline }}</p>
-
-            <div class="card-footer">
-                <span
-                    class="badge"
-                    data-release-version
-                    data-short
-                    data-repository="{{ project.repository }}"
-                >…</span>
-                <span class="more">자세히 보기 →</span>
-            </div>
-        </div>
-
-    </a>
-    {% endfor %}
-</div>
+{% include home.html %}
