@@ -9,8 +9,8 @@ const MESSAGES = {
     ko: {
         locale: "ko-KR",
         latest: (tag, date) => `최신 버전 ${tag} (${date})`,
-        failed: text.failed,
-        fallback: text.fallback,
+        failed: "최신 버전을 불러오지 못했습니다.",
+        fallback: "GitHub 릴리스에서 받기",
     },
     ja: {
         locale: "ja-JP",
