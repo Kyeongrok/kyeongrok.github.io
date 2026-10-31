@@ -2,7 +2,7 @@
 title: 炎龍騎士団2
 tagline: 炎龍騎士団2（Flame Dragon 2）リメイクランチャー · ゲームとデータエディター
 repository: Kyeongrok/fd2-remake
-banner_theme: dragon
+banner: /assets/images/fd2-remake.jpg
 order: 5
 downloads:
   - match: '^Fd2\.exe$'

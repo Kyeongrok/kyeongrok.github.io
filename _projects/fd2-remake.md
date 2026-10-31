@@ -2,7 +2,7 @@
 title: 용의기사2
 tagline: 용의기사2 리메이크 런처 · 게임과 데이터 편집기
 repository: Kyeongrok/fd2-remake
-banner_theme: dragon
+banner: /assets/images/fd2-remake.jpg
 order: 5
 downloads:
   - match: '^Fd2\.exe$'
