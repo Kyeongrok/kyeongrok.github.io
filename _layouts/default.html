@@ -75,10 +75,20 @@
 
     <footer class="site-footer">
         <a href="https://github.com/Kyeongrok">github.com/Kyeongrok</a>
+        {% if site.goatcounter %}
+        <p
+            class="visitor-count"
+            data-visitor-count="https://{{ site.goatcounter }}.goatcounter.com/counter/TOTAL.json"
+            hidden
+        >{{ t.visitor_count }} <span></span></p>
+        {% endif %}
     </footer>
 </div>
 
 <script src="{{ '/assets/js/releases.js' | relative_url }}"></script>
+{% if site.goatcounter %}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{% endif %}
 
 </body>
 </html>

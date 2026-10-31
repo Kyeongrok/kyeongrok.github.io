@@ -36,6 +36,11 @@ layout: default
             {{ t.checking_version }}
         </span>
         ·
+        {% assign download_count = site.data.download_stats[page.repository] %}
+        {% if download_count %}
+        <span>{{ t.download_count | replace: "__count__", download_count }}</span>
+        ·
+        {% endif %}
         <a href="https://github.com/{{ page.repository }}/releases">{{ t.all_releases }}</a>
         ·
         <a href="https://github.com/{{ page.repository }}">GitHub</a>

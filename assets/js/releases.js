@@ -181,5 +181,29 @@ async function fillDownloads(container) {
     }
 }
 
+// GoatCounter 의 누적 방문 수. 못 불러오면 푸터에 아무것도 안 보이게 둔다.
+async function fillVisitorCount(element) {
+    try {
+        const response = await fetch(element.dataset.visitorCount);
+
+        if (!response.ok) {
+            throw new Error("Failed to load visitor count");
+        }
+
+        const { count } = await response.json();
+
+        element.querySelector("span").textContent = count;
+        element.hidden = false;
+
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 document.querySelectorAll("[data-release-version]").forEach(fillVersion);
 document.querySelectorAll("[data-downloads]").forEach(fillDownloads);
+document.querySelectorAll("[data-visitor-count]").forEach(fillVisitorCount);
+
+document.querySelectorAll("[data-number]").forEach(element => {
+    element.textContent = Number(element.textContent).toLocaleString(text.locale);
+});

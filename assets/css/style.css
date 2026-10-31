@@ -117,6 +117,11 @@ a {
     text-decoration: none;
 }
 
+.visitor-count {
+    margin: 6px 0 0;
+    color: #6b7280;
+}
+
 .page {
     width: min(1040px, 100%);
     margin: 0 auto;
@@ -263,6 +268,14 @@ a {
     align-items: center;
     margin-top: auto;
     font-size: 13px;
+}
+
+.card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+    color: #9ca3af;
 }
 
 .badge {

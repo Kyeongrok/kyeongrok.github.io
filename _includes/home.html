@@ -28,12 +28,18 @@
             <p>{{ project.tagline }}</p>
 
             <div class="card-footer">
-                <span
-                    class="badge"
-                    data-release-version
-                    data-short
-                    data-repository="{{ project.repository }}"
-                >…</span>
+                <div class="card-meta">
+                    <span
+                        class="badge"
+                        data-release-version
+                        data-short
+                        data-repository="{{ project.repository }}"
+                    >…</span>
+                    {% assign download_count = site.data.download_stats[project.repository] %}
+                    {% if download_count %}
+                    <span>{{ t.download_count | replace: "__count__", download_count }}</span>
+                    {% endif %}
+                </div>
                 <span class="more">{{ t.more }}</span>
             </div>
         </div>

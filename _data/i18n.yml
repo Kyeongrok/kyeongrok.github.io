@@ -9,6 +9,8 @@ ko:
   more: 자세히 보기 →
   all_releases: 모든 릴리스
   checking_version: 최신 버전 확인 중...
+  download_count: '다운로드 <span data-number>__count__</span>회'
+  visitor_count: 누적 방문
 
 ja:
   name: 日本語
@@ -20,3 +22,5 @@ ja:
   more: 詳しく見る →
   all_releases: すべてのリリース
   checking_version: 最新バージョンを確認中...
+  download_count: 'ダウンロード <span data-number>__count__</span> 回'
+  visitor_count: 累計訪問

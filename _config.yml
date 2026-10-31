@@ -7,6 +7,9 @@ languages: [ko, ja]
 
 markdown: kramdown
 
+# 방문자 수 집계용 GoatCounter 사이트 코드. 비워 두면 집계도, 푸터 표시도 하지 않는다.
+goatcounter: oceanfog1
+
 collections:
   projects:
     output: true
@@ -32,4 +35,5 @@ defaults:
 
 exclude:
   - README.md
+  - scripts
   - .playwright-mcp
