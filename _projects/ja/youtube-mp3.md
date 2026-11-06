@@ -5,6 +5,7 @@ repository: Kyeongrok/youtube-mp3
 banner: /assets/images/youtube-mp3.jpg
 banner_position: center top
 order: 4
+category: util
 downloads:
   - match: '-win-x64\.exe$'
     label: ⬇ ダウンロード

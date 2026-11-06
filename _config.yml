@@ -25,6 +25,7 @@ defaults:
       type: projects
     values:
       layout: project
+      category: game   # game | util — 왼쪽 메뉴의 게임 / 유틸 구분
   # 일본어판 프로젝트는 _projects/ja/ 에 같은 파일 이름으로 둔다.
   - scope:
       path: "_projects/ja"

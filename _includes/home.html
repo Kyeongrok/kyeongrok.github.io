@@ -6,7 +6,7 @@
 </section>
 
 <div class="cards">
-    {% assign projects = site.projects | where: "lang", page.lang | sort: "order" %}
+    {% assign projects = site.projects | where: "lang", page.lang | where: "category", page.category | sort: "order" %}
     {% for project in projects %}
     <a class="card" href="{{ project.url | relative_url }}">
 

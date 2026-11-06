@@ -27,9 +27,14 @@
 
 <body>
 
-{% assign on_downloads = false %}
-{% if page.ref == "home" or page.collection == "projects" %}
-    {% assign on_downloads = true %}
+{% comment %} 왼쪽 메뉴: 게임 / 유틸. 프로젝트 페이지는 자기 category 쪽 메뉴를 켠다. {% endcomment %}
+{% assign section = "" %}
+{% if page.ref == "home" %}
+    {% assign section = "game" %}
+{% elsif page.ref == "utils" %}
+    {% assign section = "util" %}
+{% elsif page.collection == "projects" %}
+    {% assign section = page.category %}
 {% endif %}
 
 <aside class="sidebar">
@@ -38,9 +43,14 @@
     <nav class="side-nav">
         <a
             href="{{ t.home | relative_url }}"
-            {% if on_downloads %}class="active"{% endif %}
+            {% if section == "game" %}class="active"{% endif %}
             {% if page.ref == "home" %}aria-current="page"{% endif %}
-        >{{ t.nav_downloads }}</a>
+        >{{ t.nav_games }}</a>
+        <a
+            href="{{ t.utils | relative_url }}"
+            {% if section == "util" %}class="active"{% endif %}
+            {% if page.ref == "utils" %}aria-current="page"{% endif %}
+        >{{ t.nav_utils }}</a>
         {% comment %} Profile 메뉴는 당분간 숨김 (페이지는 /profile/ 에 그대로 있음)
         <a
             href="{{ '/profile/' | relative_url }}"
