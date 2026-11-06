@@ -123,6 +123,11 @@ async function fillVersion(element) {
     }
 }
 
+// 안드로이드 폰 · 태블릿으로 들어왔는가 — 받을 수 있는 모바일 파일이 APK 뿐이라 아이폰은 PC 와 같이 둔다.
+function isMobile() {
+    return /Android/i.test(navigator.userAgent || "");
+}
+
 // downloads 항목의 match 는 파일 이름 정규식이다 — 이름에 버전이 붙거나 바뀌어도 찾도록.
 async function fillDownloads(container) {
     const repository = container.dataset.repository;
@@ -132,9 +137,15 @@ async function fillDownloads(container) {
         const release = await getLatestRelease(repository);
 
         // primary 버튼과 beside_primary 버튼은 한 줄(.download-row)에 나란히 놓는다.
+        // 폰으로 들어오면 mobile_primary 항목을 맨 위 큰 버튼으로 — PC 용 primary · beside_primary 는 작은 버튼으로 내린다.
+        const mobileFirst = isMobile() && config.some(c => c.mobile_primary);
+        const items = mobileFirst
+            ? [...config.filter(c => c.mobile_primary), ...config.filter(c => !c.mobile_primary)]
+                .map(c => ({ ...c, primary: !!c.mobile_primary, beside_primary: false }))
+            : config;
         let row = null;
 
-        for (const { match, label, sub, primary, beside_primary } of config) {
+        for (const { match, label, sub, primary, beside_primary } of items) {
             const pattern = new RegExp(match);
             const asset = release.assets.find(a => pattern.test(a.name));
 

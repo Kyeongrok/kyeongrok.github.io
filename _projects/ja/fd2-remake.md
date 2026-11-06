@@ -5,20 +5,24 @@ repository: Kyeongrok/fd2-remake
 banner: /assets/images/fd2-remake.jpg
 order: 5
 downloads:
-  - match: '^Fd2\.exe$'
-    label: ⬇ ゲームをダウンロード
-    sub: インストール不要ですぐ起動
+  - match: '^Fd2Remake-win-Setup\.exe$'
+    label: ⬇ ゲームをインストール（おすすめ）
+    sub: Windows · 自動アップデート
     primary: true
+  - match: '^Fd2\.exe$'
+    label: インストールせずに起動
+    sub: exe 一つ
+    beside_primary: true
   - match: '^Fd2-v[\d.]+\.zip$'
     label: ゲーム + エディター
     sub: zip 一つでダウンロード
-    beside_primary: true
   - match: '^Fd2\.Editor\.exe$'
     label: エディターをダウンロード
     sub: 能力値 · アイテム · 魔法 · イベント編集
   - match: '^Fd2-android-v[\d.]+\.apk$'
-    label: Android 版をダウンロード
-    sub: スマホにインストールする APK
+    label: ⬇ Android 版をダウンロード
+    sub: スマホにインストールする APK · 自動アップデート
+    mobile_primary: true
 ---
 
 ## 概要
@@ -37,7 +41,8 @@ downloads:
 
 ## ダウンロードについて
 
-- **ゲーム** — `Fd2.exe` 一つでインストールせずに起動できます。
+- **ゲームのインストール（おすすめ）** — `Fd2Remake-win-Setup.exe` でインストールすると、起動時に新しいバージョンを自動で受け取ります。
+- **インストールせずに起動** — `Fd2.exe` 一つで起動できます。
 - **エディター** — `Fd2.Editor.exe` も単体ファイルです。ゲームと同じフォルダーに置くと、ゲームメニューの **도구 > 편집기 열기**（ツール > エディターを開く）から開けます。
 - **まとめ** — 二つのファイルを zip 一つでダウンロードします。exe がブロックされる環境で使ってください。
 - **Android** — APK をインストールし、スマホに入れたゲームフォルダー（`FDFIELD.DAT` · `FIGANI.DAT` がある場所）を選ぶと、アプリ内にコピーして起動します。

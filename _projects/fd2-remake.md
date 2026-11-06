@@ -5,20 +5,24 @@ repository: Kyeongrok/fd2-remake
 banner: /assets/images/fd2-remake.jpg
 order: 5
 downloads:
-  - match: '^Fd2\.exe$'
-    label: ⬇ 게임 받기
-    sub: 설치 없이 바로 실행
+  - match: '^Fd2Remake-win-Setup\.exe$'
+    label: ⬇ 게임 설치 (권장)
+    sub: Windows · 자동 업데이트
     primary: true
+  - match: '^Fd2\.exe$'
+    label: 설치 없이 실행
+    sub: exe 하나
+    beside_primary: true
   - match: '^Fd2-v[\d.]+\.zip$'
     label: 게임 + 편집기 묶음
     sub: zip 하나로 받기
-    beside_primary: true
   - match: '^Fd2\.Editor\.exe$'
     label: 편집기 받기
     sub: 능력치 · 아이템 · 마법 · 이벤트 편집
   - match: '^Fd2-android-v[\d.]+\.apk$'
-    label: 안드로이드 받기
-    sub: 폰에 설치하는 APK
+    label: ⬇ 안드로이드 받기
+    sub: 폰에 설치하는 APK · 자동 업데이트
+    mobile_primary: true
 ---
 
 ## 소개
@@ -35,10 +39,11 @@ downloads:
 
 ## 다운로드 안내
 
-- **게임** — `Fd2.exe` 하나로 설치 없이 실행됩니다.
+- **게임 설치(권장)** — `Fd2Remake-win-Setup.exe`로 설치하면 켤 때 새 버전을 알아서 받습니다.
+- **설치 없이 실행** — `Fd2.exe` 하나로 실행됩니다. 업데이트는 새로 받아야 합니다.
 - **편집기** — `Fd2.Editor.exe`도 단일 파일입니다. 게임과 같은 폴더에 두면 게임 메뉴의 **도구 > 편집기 열기**로 열 수 있습니다.
 - **묶음** — 두 파일을 zip 하나로 받습니다. exe 파일을 막는 환경에서 쓰세요.
-- **안드로이드** — APK를 설치한 뒤 폰에 넣어 둔 용의기사2 폴더(`FDFIELD.DAT` · `FIGANI.DAT`가 있는 곳)를 고르면 앱 안으로 복사해 실행합니다.
+- **안드로이드** — APK를 설치하고 켜면 원작 자료를 알아서 받아 바로 시작합니다. 새 버전이 나오면 켤 때 묻고 받습니다. 폰으로 이 페이지에 들어오면 안드로이드 받기가 맨 위 큰 버튼으로 나옵니다.
 
 ## 편집기 기능
 
