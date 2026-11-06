@@ -2,7 +2,8 @@
 title: 大航海時代IV ヘルパー
 tagline: 大航海時代IV リマスター版を遊びやすくするランチャー兼ツール集
 repository: Kyeongrok/dh4-helper
-banner_theme: sea
+banner: /assets/images/dh4-helper-banner.jpg
+banner_position: center top
 order: 2
 downloads:
   - match: '^Dh4Launcher-win-Setup\.exe$'

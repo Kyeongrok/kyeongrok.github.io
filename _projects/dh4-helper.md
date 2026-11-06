@@ -2,7 +2,8 @@
 title: 대항해시대4 헬퍼
 tagline: 대항해시대4 리마스터를 할 만하게 해주는 런처 겸 도구 모음
 repository: Kyeongrok/dh4-helper
-banner_theme: sea
+banner: /assets/images/dh4-helper-banner.jpg
+banner_position: center top
 order: 2
 downloads:
   - match: '^Dh4Launcher-win-Setup\.exe$'
