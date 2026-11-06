@@ -4,6 +4,7 @@ tagline: マグナカルタ パッチ版 · 原作のデータをそのまま読
 repository: Kyeongrok/magnacarta-remake
 banner: /assets/images/magnacarta-remake.jpg
 order: 6
+published: false
 downloads:
   - match: '^MagnaCarta\.exe$'
     label: ⬇ パッチ版をダウンロード

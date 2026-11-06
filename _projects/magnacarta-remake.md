@@ -4,6 +4,7 @@ tagline: 마그나카르타 패치판 · 원본 자료를 그대로 읽어 다�
 repository: Kyeongrok/magnacarta-remake
 banner: /assets/images/magnacarta-remake.jpg
 order: 6
+published: false
 downloads:
   - match: '^MagnaCarta\.exe$'
     label: ⬇ 패치판 받기
