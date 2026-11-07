@@ -2,7 +2,16 @@
 title: 키즈 한글
 tagline: 한글 · 숫자 · 알파벳을 손가락으로 따라 쓰며 배우는 아이용 Android 앱
 repository: Kyeongrok/kids-hangul
-banner_theme: sea
+banner: /assets/images/kids-hangul.jpg
+screenshots:
+  - src: /assets/images/kids-hangul/hangul.jpg
+    caption: 한글 따라 쓰기
+  - src: /assets/images/kids-hangul/word.jpg
+    caption: 낱말 쓰기
+  - src: /assets/images/kids-hangul/numbers.jpg
+    caption: 숫자 공부
+  - src: /assets/images/kids-hangul/alphabet.jpg
+    caption: 알파벳
 order: 2
 category: mobile
 downloads:

@@ -2,7 +2,16 @@
 title: キッズハングル
 tagline: ハングル · 数字 · アルファベットを指でなぞって覚える子ども向け Android アプリ
 repository: Kyeongrok/kids-hangul
-banner_theme: sea
+banner: /assets/images/kids-hangul.jpg
+screenshots:
+  - src: /assets/images/kids-hangul/hangul.jpg
+    caption: ハングル
+  - src: /assets/images/kids-hangul/word.jpg
+    caption: 単語
+  - src: /assets/images/kids-hangul/numbers.jpg
+    caption: 数字
+  - src: /assets/images/kids-hangul/alphabet.jpg
+    caption: アルファベット
 order: 2
 category: mobile
 downloads:
