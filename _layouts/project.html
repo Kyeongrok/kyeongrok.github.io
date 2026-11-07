@@ -4,7 +4,7 @@ layout: default
 
 {% assign t = site.data.i18n[page.lang] %}
 
-{% if page.category == "util" %}{% assign back_url = t.utils %}{% else %}{% assign back_url = t.home %}{% endif %}
+{% if page.category == "util" %}{% assign back_url = t.utils %}{% elsif page.category == "mobile" %}{% assign back_url = t.mobile %}{% else %}{% assign back_url = t.home %}{% endif %}
 <a class="back" href="{{ back_url | relative_url }}">{{ t.back }}</a>
 
 <article class="project">

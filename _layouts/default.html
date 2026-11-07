@@ -27,12 +27,14 @@
 
 <body>
 
-{% comment %} 왼쪽 메뉴: 게임 / 유틸. 프로젝트 페이지는 자기 category 쪽 메뉴를 켠다. {% endcomment %}
+{% comment %} 왼쪽 메뉴: 게임 / 유틸 / 모바일. 프로젝트 페이지는 자기 category 쪽 메뉴를 켠다. {% endcomment %}
 {% assign section = "" %}
 {% if page.ref == "home" %}
     {% assign section = "game" %}
 {% elsif page.ref == "utils" %}
     {% assign section = "util" %}
+{% elsif page.ref == "mobile" %}
+    {% assign section = "mobile" %}
 {% elsif page.collection == "projects" %}
     {% assign section = page.category %}
 {% endif %}
@@ -51,6 +53,11 @@
             {% if section == "util" %}class="active"{% endif %}
             {% if page.ref == "utils" %}aria-current="page"{% endif %}
         >{{ t.nav_utils }}</a>
+        <a
+            href="{{ t.mobile | relative_url }}"
+            {% if section == "mobile" %}class="active"{% endif %}
+            {% if page.ref == "mobile" %}aria-current="page"{% endif %}
+        >{{ t.nav_mobile }}</a>
         {% comment %} Profile 메뉴는 당분간 숨김 (페이지는 /profile/ 에 그대로 있음)
         <a
             href="{{ '/profile/' | relative_url }}"
