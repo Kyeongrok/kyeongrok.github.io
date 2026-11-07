@@ -341,7 +341,16 @@ a {
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 6px;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #374151 transparent;
+}
+
+/* 화면이 넓으면 본문(760px)보다 넓게 펼쳐 여섯 장이 한 줄에 다 들어가게 한다 (.page 안쪽 폭 1008px). */
+@media (min-width: 1280px) {
+    .shots {
+        margin-inline: -124px;
+    }
 }
 
 .shots figure {
