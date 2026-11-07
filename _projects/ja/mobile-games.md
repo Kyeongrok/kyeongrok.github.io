@@ -2,7 +2,20 @@
 title: ゲーム集
 tagline: 数独 · 上海 · フリーセル · ラミィキューブ · 宝石の煌き · 麻雀をひとつにまとめた Android ゲーム
 repository: Kyeongrok/mobile-games
-banner_theme: green
+banner: /assets/images/mobile-games.jpg
+screenshots:
+  - src: /assets/images/mobile-games/sudoku.jpg
+    caption: 数独
+  - src: /assets/images/mobile-games/shanghai.jpg
+    caption: 上海
+  - src: /assets/images/mobile-games/riichi.jpg
+    caption: 麻雀
+  - src: /assets/images/mobile-games/freecell.jpg
+    caption: フリーセル
+  - src: /assets/images/mobile-games/rummikub.jpg
+    caption: ラミィキューブ
+  - src: /assets/images/mobile-games/splendor.jpg
+    caption: 宝石の煌き
 order: 1
 category: mobile
 downloads:

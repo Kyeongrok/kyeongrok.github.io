@@ -2,7 +2,20 @@
 title: 게임 모음
 tagline: 스도쿠 · 상하이 · 프리셀 · 루미큐브 · 스플렌더 · 리치마작을 한 앱에서 즐기는 Android 게임
 repository: Kyeongrok/mobile-games
-banner_theme: green
+banner: /assets/images/mobile-games.jpg
+screenshots:
+  - src: /assets/images/mobile-games/sudoku.jpg
+    caption: 스도쿠
+  - src: /assets/images/mobile-games/shanghai.jpg
+    caption: 상하이
+  - src: /assets/images/mobile-games/riichi.jpg
+    caption: 리치마작
+  - src: /assets/images/mobile-games/freecell.jpg
+    caption: 프리셀
+  - src: /assets/images/mobile-games/rummikub.jpg
+    caption: 루미큐브
+  - src: /assets/images/mobile-games/splendor.jpg
+    caption: 스플렌더
 order: 1
 category: mobile
 downloads:

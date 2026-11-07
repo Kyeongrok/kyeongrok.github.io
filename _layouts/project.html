@@ -9,7 +9,17 @@ layout: default
 
 <article class="project">
 
-    {% if page.banner %}
+    {% comment %} screenshots 가 있으면 대표 배너 대신 화면들을 가로로 늘어놓는다 (모바일 앱처럼 세로 화면일 때). {% endcomment %}
+    {% if page.screenshots %}
+    <div class="shots">
+        {% for shot in page.screenshots %}
+        <figure>
+            <img src="{{ shot.src | relative_url }}" alt="{{ shot.caption }}" loading="lazy">
+            <figcaption>{{ shot.caption }}</figcaption>
+        </figure>
+        {% endfor %}
+    </div>
+    {% elsif page.banner %}
     <div class="hero banner{% if page.banner_light %} light{% endif %}">
         <img
             src="{{ page.banner | relative_url }}"

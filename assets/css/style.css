@@ -333,6 +333,38 @@ a {
     );
 }
 
+/* 세로 화면 스크린샷 줄. 넓으면 한 줄에 다 보이고, 좁으면 옆으로 넘겨 본다. */
+.shots {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(150px, 1fr);
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 6px;
+}
+
+.shots figure {
+    margin: 0;
+    scroll-snap-align: start;
+}
+
+.shots img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 540 / 1100;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.shots figcaption {
+    margin-top: 8px;
+    color: #9ca3af;
+    font-size: 13px;
+    font-weight: 600;
+}
+
 .project h1 {
     font-size: clamp(30px, 6vw, 42px);
     margin: 18px 0 4px;
