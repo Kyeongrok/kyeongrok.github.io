@@ -1,6 +1,6 @@
 ---
 title: ゲーム集
-tagline: 数独 · 上海 · フリーセル · ラミィキューブ · 宝石の煌き · 麻雀をひとつにまとめた Android ゲーム
+tagline: 数独 · 上海 · フリーセル · ラミィキューブ · 宝石の煌き · 麻雀 · 元素神経衰弱をひとつにまとめた Android ゲーム
 repository: Kyeongrok/mobile-games
 banner: /assets/images/mobile-games.jpg
 screenshots:
@@ -16,6 +16,8 @@ screenshots:
     caption: ラミィキューブ
   - src: /assets/images/mobile-games/splendor.jpg
     caption: 宝石の煌き
+  - src: /assets/images/mobile-games/elements.jpg
+    caption: 元素神経衰弱
 order: 1
 category: mobile
 downloads:
@@ -27,7 +29,7 @@ downloads:
 
 ## 概要
 
-ひとりで遊べるパズル・ボードゲーム 6 種類をまとめた Android アプリです。広告もインターネット接続も不要です。
+ひとりで遊べるパズル・ボードゲーム 7 種類をまとめた Android アプリです。広告もインターネット接続も不要です。
 途中のゲームは自動で保存され、アプリを開き直すと続きから遊べます。
 
 ## ゲーム
@@ -38,6 +40,7 @@ downloads:
 - **ラミィキューブ** — コンピューター 1〜3 人と対戦、チュートリアルと練習モード
 - **宝石の煌き（スプレンダー）** — 宝石を集めてカードを買うコンピューター対戦
 - **麻雀** — コンピューター 3 人と打つ 4 人打ちリーチ麻雀
+- **元素神経衰弱** — 伏せたカードから元素記号と名前（韓国語）のペアを探す、元素の範囲とカード枚数を選択
 
 ## インストール方法
 

@@ -1,6 +1,6 @@
 ---
 title: 게임 모음
-tagline: 스도쿠 · 상하이 · 프리셀 · 루미큐브 · 스플렌더 · 리치마작을 한 앱에서 즐기는 Android 게임
+tagline: 스도쿠 · 상하이 · 프리셀 · 루미큐브 · 스플렌더 · 리치마작 · 원소 짝맞추기를 한 앱에서 즐기는 Android 게임
 repository: Kyeongrok/mobile-games
 banner: /assets/images/mobile-games.jpg
 screenshots:
@@ -16,6 +16,8 @@ screenshots:
     caption: 루미큐브
   - src: /assets/images/mobile-games/splendor.jpg
     caption: 스플렌더
+  - src: /assets/images/mobile-games/elements.jpg
+    caption: 원소 짝맞추기
 order: 1
 category: mobile
 downloads:
@@ -27,7 +29,7 @@ downloads:
 
 ## 소개
 
-혼자서 즐기는 퍼즐·보드게임 여섯 가지를 모은 Android 앱입니다. 광고도, 인터넷 연결도 필요 없습니다.
+혼자서 즐기는 퍼즐·보드게임 일곱 가지를 모은 Android 앱입니다. 광고도, 인터넷 연결도 필요 없습니다.
 진행 중인 판은 자동으로 저장되어 앱을 다시 켜면 이어서 할 수 있습니다.
 
 ## 게임
@@ -38,6 +40,7 @@ downloads:
 - **루미큐브** — 컴퓨터 1~3명과 대결, 튜토리얼과 연습 모드
 - **스플렌더** — 보석을 모아 카드를 사는 컴퓨터 대전
 - **리치마작** — 컴퓨터 3명과 치는 4인 일본식 마작
+- **원소 짝맞추기** — 뒤집힌 카드에서 원소기호와 이름의 짝 찾기, 원소 범위와 카드 수 선택
 
 ## 설치 방법
 
