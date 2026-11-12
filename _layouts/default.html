@@ -20,6 +20,10 @@
     <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url | absolute_url }}">
     {% endfor %}
 
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="48x48">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/favicon-96.png' | relative_url }}" sizes="96x96">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+
     <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
