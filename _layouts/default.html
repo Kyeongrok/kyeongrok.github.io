@@ -62,6 +62,12 @@
             {% if section == "mobile" %}class="active"{% endif %}
             {% if page.ref == "mobile" %}aria-current="page"{% endif %}
         >{{ t.nav_mobile }}</a>
+        <a
+            class="external"
+            href="https://krksap.tistory.com"
+            target="_blank"
+            rel="noopener"
+        >{{ t.nav_blog }} <span aria-hidden="true">↗</span></a>
         {% comment %} Profile 메뉴는 당분간 숨김 (페이지는 /profile/ 에 그대로 있음)
         <a
             href="{{ '/profile/' | relative_url }}"

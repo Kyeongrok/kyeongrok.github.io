@@ -68,6 +68,11 @@ a {
     color: #f9fafb;
 }
 
+.side-nav a.external span {
+    font-size: 0.85em;
+    opacity: 0.7;
+}
+
 .main {
     display: flex;
     flex-direction: column;
