@@ -1,0 +1,32 @@
+---
+layout: default
+ref: guides
+section: guide
+title: 가이드
+permalink: /guides/
+---
+
+{% comment %} 가이드 모음 — guides/ 아래 section: guide 인 페이지를 game 으로 묶어 카드로 보인다. {% endcomment %}
+{% assign t = site.data.i18n[page.lang] %}
+
+<section class="intro">
+    <h1>가이드</h1>
+    <p>게임 속 계산식과 도구 사용법을 정리했습니다.</p>
+</section>
+
+{% assign guides = site.pages | where: "section", "guide" | where_exp: "p", "p.ref != 'guides'" | sort: "order" %}
+<div class="cards">
+    {% for guide in guides %}
+    <a class="card" href="{{ guide.url | relative_url }}">
+        <div class="card-body">
+            {% if guide.game %}<span class="guide-game">{{ guide.game }}</span>{% endif %}
+            <h2>{{ guide.title }}</h2>
+            <p>{{ guide.tagline }}</p>
+            <div class="card-footer">
+                <span></span>
+                <span class="more">{{ t.more }}</span>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>

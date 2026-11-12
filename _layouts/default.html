@@ -41,6 +41,8 @@
     {% assign section = "mobile" %}
 {% elsif page.collection == "projects" %}
     {% assign section = page.category %}
+{% elsif page.section %}
+    {% assign section = page.section %}
 {% endif %}
 
 <aside class="sidebar">
@@ -62,6 +64,11 @@
             {% if section == "mobile" %}class="active"{% endif %}
             {% if page.ref == "mobile" %}aria-current="page"{% endif %}
         >{{ t.nav_mobile }}</a>
+        <a
+            href="{{ t.guides | relative_url }}"
+            {% if section == "guide" %}class="active"{% endif %}
+            {% if page.ref == "guides" %}aria-current="page"{% endif %}
+        >{{ t.nav_guides }}</a>
         <a
             class="external"
             href="https://krksap.tistory.com"

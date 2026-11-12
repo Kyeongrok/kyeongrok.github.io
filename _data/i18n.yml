@@ -6,9 +6,11 @@ ko:
   home: /
   utils: /utils/
   mobile: /mobile/
+  guides: /guides/
   nav_games: 게임
   nav_utils: 유틸
   nav_mobile: 모바일
+  nav_guides: 가이드
   nav_blog: 블로그
   back: ← 전체 프로젝트
   more: 자세히 보기 →
@@ -24,9 +26,11 @@ ja:
   home: /ja/
   utils: /ja/utils/
   mobile: /ja/mobile/
+  guides: /guides/
   nav_games: ゲーム
   nav_utils: ユーティリティ
   nav_mobile: モバイル
+  nav_guides: ガイド
   nav_blog: ブログ
   back: ← プロジェクト一覧
   more: 詳しく見る →

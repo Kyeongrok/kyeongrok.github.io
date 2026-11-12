@@ -1,5 +1,8 @@
 ---
 layout: default
+section: guide
+game: 대항해시대3
+order: 2
 title: 대항해시대3 애드온 만드는 법
 tagline: Lua 로 지도 위에 내 패널을 띄우는 애드온을 만드는 방법
 permalink: /projects/daehanghae3/addons/

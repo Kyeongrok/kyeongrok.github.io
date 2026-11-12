@@ -1,5 +1,8 @@
 ---
 layout: default
+section: guide
+game: 창세기전3 파트2
+order: 3
 title: 창세기전3 파트2 어빌리티 편집 설명서
 tagline: 편집기로 어빌리티의 위력 · 사거리 · 범위 · 비용 · 효과 · 설명을 직접 고치는 방법
 permalink: /projects/war-of-genesis-3-part2/ability-editor/

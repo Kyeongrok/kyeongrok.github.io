@@ -6,6 +6,8 @@ lang: ko
 languages: [ko, ja]
 
 markdown: kramdown
+kramdown:
+  toc_levels: 2..2
 
 # 방문자 수 집계용 GoatCounter 사이트 코드. 비워 두면 집계도, 푸터 표시도 하지 않는다.
 goatcounter: oceanfog1
