@@ -13,7 +13,7 @@ permalink: /guides/daehanghae3-formulas-sea/
 <section class="intro">
     <h1>계산식 — 바다</h1>
     <p>항해 속도 · 조우 · 바다 사건 · 해전</p>
-    <p class="guide-tabs"><a href="{{ '/guides/daehanghae3-formulas-land/' | relative_url }}">육지</a> · <a href="{{ '/guides/daehanghae3-formulas-sea/' | relative_url }}">바다</a> · <a href="{{ '/guides/daehanghae3-formulas-trade/' | relative_url }}">교역 · 도시</a></p>
+    <p class="guide-tabs"><a href="{{ '/guides/daehanghae3-formulas-land/' | relative_url }}">육지</a> · <a href="{{ '/guides/daehanghae3-formulas-sea/' | relative_url }}">바다</a> · <a href="{{ '/guides/daehanghae3-formulas-trade/' | relative_url }}">교역 · 계약</a> · <a href="{{ '/guides/daehanghae3-formulas-city/' | relative_url }}">도시</a></p>
 </section>
 
 <div class="content about guide" markdown="1">
