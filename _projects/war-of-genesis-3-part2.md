@@ -73,6 +73,8 @@ downloads:
 
 어빌리티의 위력 · 사거리 · 비용 등을 직접 고쳐 보고 싶다면 [어빌리티 편집 설명서]({{ '/projects/war-of-genesis-3-part2/ability-editor/' | relative_url }})를 보세요.
 
+직업마다 전직 조건과 배울 수 있는 어빌리티는 [직업표 가이드]({{ '/projects/war-of-genesis-3-part2/jobs/' | relative_url }})에 파트1 · 파트2 모두 정리해 두었습니다.
+
 ## 필요 환경
 
 - Windows 10 / 11 (64비트)

@@ -75,6 +75,8 @@ downloads:
 
 アビリティの威力・射程・コストなどを自分で編集してみたい場合は、[アビリティ編集ガイド（韓国語）]({{ '/projects/war-of-genesis-3-part2/ability-editor/' | relative_url }})をご覧ください。
 
+職業ごとの転職条件と習得できるアビリティは、[職業表ガイド（韓国語）]({{ '/projects/war-of-genesis-3-part2/jobs/' | relative_url }})にパート1・パート2ともにまとめています。
+
 ## 動作環境
 
 - Windows 10 / 11（64ビット）
