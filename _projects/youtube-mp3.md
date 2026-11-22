@@ -28,6 +28,8 @@ YouTube 영상을 검색하고 MP3 오디오로 추출하는 앱입니다. Windo
 
 ![YouTube MP3 실행 화면]({{ '/assets/images/youtube-mp3.jpg' | relative_url }})
 
+처음 쓰신다면 [단계별 사용 가이드]({{ '/projects/youtube-mp3/guide/' | relative_url }})를 보세요 — 검색부터 MP3 저장 · 재생까지 스크린샷으로 설명합니다.
+
 ## 기능
 
 - 검색어로 YouTube 영상 검색
