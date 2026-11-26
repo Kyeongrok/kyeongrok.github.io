@@ -2,7 +2,7 @@
 title: 創世記伝3（パート1 · パート2）
 tagline: 創世記伝3 パート1 · パート2 リメイク · ゲームとデータエディター
 repository: Kyeongrok/the-war-of-genesis-clicker
-banner: /assets/images/war-of-genesis-3-part2.jpg
+banner: /assets/images/war-of-genesis-3.jpg
 banner_light: true
 order: 3
 downloads:

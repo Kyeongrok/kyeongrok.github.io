@@ -2,7 +2,7 @@
 title: 창세기전3 (파트1 · 파트2)
 tagline: 창세기전3 파트1 · 파트2 리메이크 · 게임과 데이터 에디터
 repository: Kyeongrok/the-war-of-genesis-clicker
-banner: /assets/images/war-of-genesis-3-part2.jpg
+banner: /assets/images/war-of-genesis-3.jpg
 banner_light: true
 order: 3
 downloads:
